@@ -8,6 +8,8 @@ const getProducts = async (req, res) => {
     } catch (error) {
         res.json({success: false, message: "oh no"})
     }
-}
+};
+
+// createProduct
 
 module.exports = getProducts;
