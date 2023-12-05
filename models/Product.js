@@ -10,4 +10,4 @@ const productSchema = new mongoose.Schema({
 //se crea un modelo que se conecte a la coleccion en mongodb
 const Product = mongoose.model("products", productSchema);
 
-module.export = Product;
+module.exports = Product;
