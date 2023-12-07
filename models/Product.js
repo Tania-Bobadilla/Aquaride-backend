@@ -10,7 +10,7 @@ const colorSchema = new mongoose.Schema({
 
 })
 
-//se crea un esquema donde guardar los documentos dentro de las colecciones(?)
+//se crea un esquema donde guardar los documentos dentro de las colecciones, desde aqui voy a consultar o pedirle datos a la API(?) esta es la estructura que deberian tener todos los datos que subimos
 const productSchema = new mongoose.Schema({
     sku: {
         type: String, 
