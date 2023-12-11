@@ -26,7 +26,7 @@ const loginUser = async(req, res) => {
         //buscar password en mongo
         const pass = user.password;
         // console.log(user);
-        console.log(pass)
+        // console.log(pass)
     
 
         //condicional para ver si usuario existe
@@ -36,9 +36,19 @@ const loginUser = async(req, res) => {
             throw new Error("la contraseña es incorrecta")
         }
         //luego logica que admita email y pass
-        res.json({success: true, message: "has iniciado sesion correctamente", email, password})
+        res.json({success: true, message: "has iniciado sesion correctamente", token: user.generateToken()})
     } catch (error) {
         res.status(500).json({success: false, message: error.message})
+    }
+}
+
+const getUser = async(req, res) => {
+    try {
+        const users = await User.find();
+        // .populate("favoriteProducts");
+        res.json({sucess: true, info: users})
+    } catch (error) {
+        res.json({success: false, message: error.message})
     }
 }
 
