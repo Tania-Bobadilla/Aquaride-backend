@@ -7,7 +7,7 @@ const userRouter = express.Router();
 
 //ruta registro de usuario
 userRouter.route("/createUser")
-    .post(createUser) 
+    .post(createUser) //auth, creatUser  
     .get(auth, getUser)   
 
 //ruta de login/acceso de usuario    

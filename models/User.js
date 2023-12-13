@@ -1,6 +1,8 @@
 const mongoose = require("mongoose");
 const jwt = require("jsonwebtoken");
 // const secret = process.env.SECRET;
+//importar crypyto para encriptar constraseñas
+const crypto = require("crypto");
 
 //se crea un esquema donde guardar los documentos dentro de las colecciones, desde aqui voy a consultar o pedirle datos a la API(?) esta es la estructura que deberian tener todos los datos que subimos
 const userSchema = new mongoose.Schema({
@@ -11,6 +13,11 @@ const userSchema = new mongoose.Schema({
         lowercase: true,
         minLength: 2
     },
+
+    salt: {
+        type: String
+    },
+
     email: {
         type: String,
         trim: true,
@@ -37,7 +44,13 @@ const userSchema = new mongoose.Schema({
     //     type: mongoose.Types.ObjectId,
     //     ref: "product"
     // } 
-});
+}); 
+
+//escriptacion, funcion que recibe un parametro que es la contraseña del usuario  
+userSchema.methods.encriptarPassword = function() {
+    this.salt = crypto.randomBytes(10).toString("hex");
+    this.password = crypto.pbkdf2Sync(password, this.salt, 10000, 10, "sha512").toString("hex")
+}
 
 //se genera token para el usuario
 
