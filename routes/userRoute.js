@@ -1,8 +1,8 @@
 const express = require("express"); 
-const {createUser, loginUser, getUser} = require("../controllers/userController")
+const {createUser, loginUser, getUser, editUser, deleteUser} = require("../controllers/userController")
 const auth = require("../middlewares/auth")
 
-//se instacia el router de express (instaciamiento del metodo router que esta dentro de express)
+
 const userRouter = express.Router();
 
 //ruta registro de usuario
@@ -13,6 +13,10 @@ userRouter.route("/createUser")
 //ruta de login/acceso de usuario    
 userRouter.route("/login")    
     .post(loginUser)
+
+userRouter.route('/user/:id')
+    .put(auth, editUser)
+    .delete(auth, deleteUser)    
 
 
 module.exports = userRouter;

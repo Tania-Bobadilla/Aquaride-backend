@@ -10,7 +10,7 @@ const colorSchema = new mongoose.Schema({
 
 })
 
-//se crea un esquema donde guardar los documentos dentro de las colecciones, desde aqui voy a consultar o pedirle datos a la API(?) esta es la estructura que deberian tener todos los datos que subimos
+// Se crea un esquema donde guardar los documentos dentro de las colecciones, desde aqui voy a consultar o pedirle datos a la API(?) esta es la estructura que deberian tener todos los datos que se suben
 const productSchema = new mongoose.Schema({
     sku: {
         type: String, 
@@ -32,13 +32,16 @@ const productSchema = new mongoose.Schema({
         min: 0,
         max: 10000000
     },
+
     image: String,
+
     stock: {
         type: Number,
         min: 0,
         max: 100
 
     }, 
+
     details: {
         typeProduct: {
             type: String
@@ -59,7 +62,7 @@ const productSchema = new mongoose.Schema({
     // colores (los podemos dejar en otro esquema)
 });
 
-//se crea un modelo que se conecte a la coleccion en mongodb
+// Se crea un modelo que se conecte a la coleccion en mongodb
 const Product = mongoose.model("products", productSchema);
 
 module.exports = Product;

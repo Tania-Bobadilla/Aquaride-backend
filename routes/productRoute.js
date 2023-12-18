@@ -1,11 +1,12 @@
 const express = require("express"); 
 const {getProducts, createProduct} = require("../controllers/productController")
+const auth = require("../middlewares/auth")
 
-//se instacia el router de express (instaciamiento del metodo router que esta dentro de express)
+// Se instacia el router de express (instaciamiento del metodo router que esta dentro de express)
 const productRouter = express.Router();
 
 productRouter.route("/products")
-    .get(getProducts)
+    .get(auth, getProducts)
 
 productRouter.route("/createProduct")
     .post(createProduct)    

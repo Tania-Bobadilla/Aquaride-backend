@@ -4,7 +4,7 @@ const jwt = require("jsonwebtoken");
 //importar crypyto para encriptar constraseñas
 const crypto = require("crypto");
 
-//se crea un esquema donde guardar los documentos dentro de las colecciones, desde aqui voy a consultar o pedirle datos a la API(?) esta es la estructura que deberian tener todos los datos que subimos
+
 const userSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -14,9 +14,7 @@ const userSchema = new mongoose.Schema({
         minLength: 2
     },
 
-    salt: {
-        type: String
-    },
+   
 
     email: {
         type: String,
@@ -24,17 +22,19 @@ const userSchema = new mongoose.Schema({
         match: [/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g],
         required: true
     },
+
     age: {
         type: Number,
         min: 16,
         max: 120
     },
+    salt: String,
+
     password: {
         type: String,
         match: [/^(?=.*\d)(?=.*[a-z])(?=.*[a-zA-Z]).{8,}$/gm],
         required: true
     },
-    // salt: String,
 
     isAdmin: {
         type: Boolean,
@@ -46,30 +46,39 @@ const userSchema = new mongoose.Schema({
     // } 
 }); 
 
-//escriptacion, funcion que recibe un parametro que es la contraseña del usuario  
-userSchema.methods.encriptarPassword = function() {
+
+// Funcion para escriptar pass, recibe un parametro que es la contraseña del usuario  
+userSchema.methods.encriptarPassword = function(password) {
     this.salt = crypto.randomBytes(10).toString("hex");
-    this.password = crypto.pbkdf2Sync(password, this.salt, 10000, 10, "sha512").toString("hex")
+    this.password = crypto.pbkdf2Sync(password, this.salt, 10000, 10, "sha-512").toString("hex")
 }
 
-//se genera token para el usuario
+// Se verificar/constrasta la encriptacion con la pass que ingresa el usuario, el salt y la pass que estan almacenadas en la base de datos
 
-//referenciar el esquema que se va a ocupar o donde quiero agregar el modelo
+userSchema.methods.verificarEncriptacion = function (password, salt, passwordDB) {
+
+    const encriptar = crypto.pbkdf2Sync(password, salt, 10000, 10, "sha-512").toString("hex")
+    return encriptar === passwordDB
+};
+
+
+// Se genera token para el usuario, se referencia el esquema que se va a ocupar 
 userSchema.methods.generateToken = function(){
-    //.this significa que del esquena referenciado se quiere sacar el id
-    // se guarda en una constante la carga que queremos que haya dentro del token
+    // ".this" significa que del esquema referenciado se quiere sacar una propiedad en especifico
+    // Se guarda en una constante la carga que queremos que haya dentro del token
     const payload = {
         id: this._id,
         name: this.name,
         isAdmin: this.isAdmin
     }
 
-    //ahora si generamos el token, que tiene un tiempo de expiracion de 15 minutos
+    // El token generado tiene un tiempo de expiracion de 15 minutos
     const token = jwt.sign(payload, process.env.SECRET, {expiresIn: 900})
     return token
 }
 
-//se crea un modelo que se conecte a la coleccion en mongodb (instanciacion de un esquema)
+
+// Se crea un modelo que se conecte a la coleccion en mongodb (instanciacion de un esquema)
 const User = mongoose.model("users", userSchema);
 
 module.exports = User;

@@ -4,23 +4,24 @@ const {expressjwt} = require("express-jwt");
 require("dotenv").config()
 
 
-//obtener token para que lo pueda ver la API
+// Obtener token para que lo pueda ver la API
      
 const getToken = (req, res) => {
     
-    //Bearer authentication
+    // Bearer authentication
     const { authorization } = req.headers;
 
     if(authorization){
 
-        //si la autorizacion es true, entonces se va a ser una separacion "split" entre el token y la frase que tiene antes ese token (bearer) (?), quiero que esto se vaya a buscar a las header de la peticion a la propiedad authorization (?)
+        // Si la autorizacion es verdadera, entonces se va a ser una separacion (split) entre el token y la palabra que tiene antes ese token (Bearer) 
         const [type, token] = authorization.split(" ");
-        //EL encabezado del token tiene que ser Bearer si no el token sea invalido, este nulo, el encabezado Bearer es una medida de seguridad
+
+        // El encabezado del token tiene que ser "Bearer", si no el token sera invalidodo, nulo (el encabezado Bearer es una medida de seguridad)
         return type === "Bearer" ? token: null;
          
     }
 
-    //despues de obteber el token, retornar null, vaciar el token
+    // Despues de obteber el token, se retorna null, se vacia el token
     return null;
 }
 
@@ -36,6 +37,6 @@ const auth = expressjwt({
     getToken
 });
 
-console.log(auth.userProperty)
+// console.log(auth.userProperty)
 
 module.exports = auth;
