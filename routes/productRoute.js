@@ -6,7 +6,7 @@ const auth = require("../middlewares/auth")
 const productRouter = express.Router();
 
 productRouter.route("/products")
-    .get(auth, getProducts)
+    .get(getProducts) //auth,
 
 productRouter.route("/createProduct")
     .post(createProduct)    
