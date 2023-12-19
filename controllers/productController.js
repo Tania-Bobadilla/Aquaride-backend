@@ -11,9 +11,9 @@ const getProducts = async (req, res) => {
 };
 
 const createProduct = async (req, res) => {
-    // Siempre usar try/catch cuando estamos pidiendo info a una api/base de datos
+    // Siempre usar try/catch cuando se pide info a una api/base de datos
     try {
-        // El nuevo producto se va a crear con la informacion extraida del cuerpo de la solicitud/formulario, se crea un nuevo doc. en la base de datos con la info que envie el usuario
+        // El nuevo producto se va a crear con la informacion extraida del cuerpo de la solicitud
         const newProduct = new Product(req.body);
 
         // Esperar a que se guarde el producto

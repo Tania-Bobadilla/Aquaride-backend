@@ -14,8 +14,9 @@ const port = process.env.PORT;
 // Se trae la conexion de la base de datos al servidor (habia puesto esto antes del dotenv y la conexion a la base de datos no funcionaba, siempre ponerlo despues)
 require("./config/database");
 
-// app.use(cors({whitelist: ["http://localhost:5173/"]}));
+// Para que la base de datos pueda ser accedida desde el frontend, se le da acceso aqui
 app.use(cors());
+// app.use(cors({whitelist: ["http://localhost:5173/"]}));
 
 // Middleware para que el servidor entienda JSON
 app.use(express.json());

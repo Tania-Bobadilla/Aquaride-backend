@@ -1,9 +1,6 @@
 const mongoose = require("mongoose");
 const jwt = require("jsonwebtoken");
-// const secret = process.env.SECRET;
-//importar crypyto para encriptar constraseñas
 const crypto = require("crypto");
-
 
 const userSchema = new mongoose.Schema({
     name: {
@@ -13,8 +10,6 @@ const userSchema = new mongoose.Schema({
         lowercase: true,
         minLength: 2
     },
-
-   
 
     email: {
         type: String,
@@ -28,6 +23,7 @@ const userSchema = new mongoose.Schema({
         min: 16,
         max: 120
     },
+
     salt: String,
 
     password: {
@@ -53,8 +49,7 @@ userSchema.methods.encriptarPassword = function(password) {
     this.password = crypto.pbkdf2Sync(password, this.salt, 10000, 10, "sha-512").toString("hex")
 }
 
-// Se verificar/constrasta la encriptacion con la pass que ingresa el usuario, el salt y la pass que estan almacenadas en la base de datos
-
+// Se verifica/constrasta la encriptacion con la pass que ingresa el usuario y el salt y la pass que estan almacenadas en la base de datos
 userSchema.methods.verificarEncriptacion = function (password, salt, passwordDB) {
 
     const encriptar = crypto.pbkdf2Sync(password, salt, 10000, 10, "sha-512").toString("hex")
@@ -72,7 +67,7 @@ userSchema.methods.generateToken = function(){
         isAdmin: this.isAdmin
     }
 
-    // El token generado tiene un tiempo de expiracion de 15 minutos
+    // El token generado tendar un tiempo de expiracion de 15 minutos
     const token = jwt.sign(payload, process.env.SECRET, {expiresIn: 900})
     return token
 }
