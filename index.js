@@ -1,6 +1,7 @@
 // Se importan express y otras librerias
 const express = require("express");
 const productRouter = require("./routes/productRoute");
+const menClothesRouter = require("./routes/menClothesRoute")
 const userRouter = require("./routes/userRoute");
 const cors = require("cors")
 
@@ -24,6 +25,7 @@ app.use(express.json());
 // Middleware para usar router
 app.use(productRouter);
 app.use (userRouter);
+app.use(menClothesRouter);
 
 // Se levanta el servidor
 app.listen(port, () => {
