@@ -1,29 +1,29 @@
-const MenClothes = require("../models/MenClothes");
+const Accesories = require("../models/Accesories");
 
 // Funcion para obtener los productos de la base de datos
-const getMenClothes = async (req, res) => {
+const getAccesories = async (req, res) => {
     try {
-        const mclothes = await MenClothes.find();
-        res.json({success: true, messsage: "Lista de ropa de hombre", info: mclothes})
+        const accesories = await Accesories.find();
+        res.json({success: true, messsage: "Lista de accesorios", info: accesories})
     } catch (error) {
         res.json({success: false, message: error.message})
     }
 };
 
-const createMenClothes = async (req, res) => {
+const createAccesory = async (req, res) => {
     // Siempre usar try/catch cuando se pide info a una api/base de datos
     try {
         // El nuevo producto se va a crear con la informacion extraida del cuerpo de la solicitud
-        const newMenClothes = new MenClothes(req.body);
+        const newAccesory = new Accesories(req.body);
 
         // Esperar a que se guarde el producto
-        await newMenClothes.save();
+        await newAccesory.save();
 
         // Obtener respuesta
-        res.json({success: true, message: "Producto creado", info: newMenClothes})
+        res.json({success: true, message: "Producto creado", info: newAccesory})
     } catch (error) {
         res.status(500).json({success: false, massage: error.message })
     }
 };
 
-module.exports = {getMenClothes, createMenClothes}
+module.exports = {getAccesories, createAccesory}

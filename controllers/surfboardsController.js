@@ -1,29 +1,29 @@
-const MenClothes = require("../models/MenClothes");
+const Surfboards = require("../models/Surfboards");
 
 // Funcion para obtener los productos de la base de datos
-const getMenClothes = async (req, res) => {
+const getSurfboards = async (req, res) => {
     try {
-        const mclothes = await MenClothes.find();
-        res.json({success: true, messsage: "Lista de ropa de hombre", info: mclothes})
+        const surfboards = await Surfboards.find();
+        res.json({success: true, messsage: "Lista de tablas de surf", info: surfboards})
     } catch (error) {
         res.json({success: false, message: error.message})
     }
 };
 
-const createMenClothes = async (req, res) => {
+const createSurfboard = async (req, res) => {
     // Siempre usar try/catch cuando se pide info a una api/base de datos
     try {
         // El nuevo producto se va a crear con la informacion extraida del cuerpo de la solicitud
-        const newMenClothes = new MenClothes(req.body);
+        const newSurfboard = new Surfboards(req.body);
 
         // Esperar a que se guarde el producto
-        await newMenClothes.save();
+        await newSurfboard.save();
 
         // Obtener respuesta
-        res.json({success: true, message: "Producto creado", info: newMenClothes})
+        res.json({success: true, message: "Producto creado", info: newSurfboard})
     } catch (error) {
         res.status(500).json({success: false, massage: error.message })
     }
 };
 
-module.exports = {getMenClothes, createMenClothes}
+module.exports = {getSurfboards, createSurfboard}
