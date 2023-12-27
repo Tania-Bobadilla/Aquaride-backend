@@ -67,9 +67,9 @@ const getUser = async(req, res) => {
 const editUser = async(req, res) => {
 
     try {
-        const {id} = req.params;
+        const _id = req.body;
         const contain = req.body;
-        const updateUser = await User.findByIdAndUpdate(id, contain, {new: true});
+        const updateUser = await User.findByIdAndUpdate(_id, contain, {new: true});
         res.json({success: true, msg: "usuario actualizado", updateUser})
     } catch (error) {
         res.status(500).json({success: false, message: error.message})
@@ -78,14 +78,24 @@ const editUser = async(req, res) => {
 
 const deleteUser =  async(req, res) => {
     try {
-        const {id} = req.params;
+        const { id } = req.body;
         const destroyUser = await User.findByIdAndDelete(id);
         res.json({success: true, msg: "usuario eliminado", destroyUser})
     } catch (error) {
-        res.status(500).json({success: false, message: error.message})
+        res.json({success: false, message: error.message})
     }
 }
 
+// Verify user
+const getVerifyUser = async(req, res) => {
+    try {
+        const {id} = req.auth;
+        const getInfoUser = await User.findById(id).select('-password -salt');
+        res.json({success: true, message: `Información de ${getInfoUser.email}`, info: getInfoUser}) 
+    } catch (error) {
+        res.json({success: false, message: error.message})
+    }
+}
 
-module.exports = {createUser, loginUser,getUser, deleteUser,editUser} 
+module.exports = {createUser, loginUser,getUser, deleteUser,editUser, getVerifyUser} 
 

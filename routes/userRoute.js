@@ -1,5 +1,5 @@
 const express = require("express"); 
-const {createUser, loginUser, getUser, editUser, deleteUser} = require("../controllers/userController")
+const {createUser, loginUser, getUser, editUser, deleteUser, getVerifyUser} = require("../controllers/userController")
 const auth = require("../middlewares/auth")
 
 
@@ -14,9 +14,11 @@ userRouter.route("/createUser")
 userRouter.route("/login")    
     .post(loginUser)
 
-userRouter.route('/user/:id')
+userRouter.route('/user')
     .put(auth, editUser)
     .delete(auth, deleteUser)    
 
+userRouter.route('/verifyUser')
+    .get(auth, getVerifyUser)
 
 module.exports = userRouter;
