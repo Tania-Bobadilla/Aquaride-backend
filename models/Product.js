@@ -54,7 +54,7 @@ const productSchema = new mongoose.Schema({
             min: 0.1
         }
     },
-    // color: [colorSchema]
+    // color: {colorSchema}
 
     // stock
     // sku
