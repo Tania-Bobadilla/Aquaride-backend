@@ -2,10 +2,10 @@
 const express = require("express");
 const productRouter = require("./routes/productRoute");
 const userRouter = require("./routes/userRoute");
-const kidsClothesRouter = require("./routes/kidsClothesRoute");
-const womenClothesRouter = require("./routes/womenClothesRoute");
-const menClothesRouter = require("./routes/menClothesRoute");
-const accesoriesRouter = require("./routes/accesoriesRoute");
+// const kidsClothesRouter = require("./routes/kidsClothesRoute");
+// const womenClothesRouter = require("./routes/womenClothesRoute");
+// const menClothesRouter = require("./routes/menClothesRoute");
+// const accesoriesRouter = require("./routes/accesoriesRoute");
 const cors = require("cors")
 
 // Se instancia express (se llama a la funcion express y se guardar en una constante)
@@ -27,11 +27,11 @@ app.use(express.json());
 
 // Middleware para usar router
 app.use(productRouter);
-app.use (userRouter);
-app.use (womenClothesRouter);
-app.use (menClothesRouter);
-app.use (accesoriesRouter);
-app.use (kidsClothesRouter);
+app.use(userRouter);
+// app.use(womenClothesRouter);
+// app.use(menClothesRouter);
+// app.use(accesoriesRouter);
+// app.use(kidsClothesRouter);
 
 // Se levanta el servidor
 app.listen(port, () => {

@@ -1,0 +1,274 @@
+[
+    {
+        "sku": "739200",
+        "name": "tabla de surf 1",
+        "image": "https://powerhousesurf.com.au/cdn/shop/products/modern-highline-sea-green-2023_2000x.webp?v=1676297463",
+        "price": 200000,
+        "stock": 10        
+    },
+
+    {
+        "sku": "920018",
+        "name": "tabla de surf 2",
+        "image": "https://contents.mediadecathlon.com/p1740854/k$9a0e806decb46843fe7e81d25f3660d6/tabla-de-surf-evolutiva-de-espuma-900-7-con-3-quillas.jpg?format=auto&quality=40&f=800x800",
+        "price": 90000,
+        "stock": 23    
+    },
+
+    {
+        "sku": "719466",
+        "name": "tabla de surf 3",
+        "image": "https://us.surfindustries.com/cdn/shop/products/tcss-20-loggerhead-honey.jpg?v=1639707612",
+        "price": 100000,
+        "stock": 12   
+    },
+
+    {
+        "sku": "845301",
+        "name": "tabla de surf 4",
+        "image": "https://www.kitemana.com/_images/h537/284474.jpg",
+        "price": 98000,
+        "stock": 20   
+    },
+
+    {
+        "sku": "737819",
+        "name": "tabla de surf 5",
+        "image": "https://contents.mediadecathlon.com/p1761954/k$65c04b7bad337c1c67265fef359a6e9a/tabla-de-surf-espuma-olaian-100-6-8con-leash-y-3-quillas.jpg?format=auto&quality=40&f=800x800",
+        "price": 80500,
+        "stock": 13   
+    },
+
+    {
+        "sku": "912769",
+        "name": "tabla de surf 6",
+        "image": "https://contents.mediadecathlon.com/p1758423/k$67bbeda9f04f2087ee325b8f841778cc/tabla-surf-espuema-500-7-1-leash-y-3-quillas.jpg?format=auto&quality=40&f=800x800",
+        "price": 78000,
+        "stock": 22
+    },
+
+    {
+        "sku": "773016",
+        "name": "tabla de surf 7",
+        "image": "https://contents.mediadecathlon.com/p2174669/k$d34dcdc1aa1f954f2271477fe686140b/tabla-surf-500-inflable-compacta-7-6quote-sin-bombin-ni-leash.jpg?format=auto&quality=40&f=800x800",
+        "price": 110000,
+        "stock": 10
+    },
+
+    {
+        "sku": "112956",
+        "name": "tabla de surf 8",
+        "image": "https://contents.mediadecathlon.com/p1740730/k$ff9b79b5e73cdaca7387d285a8955a92/tabla-de-surf-espuma-olaian-500-6-se-entrega-con-1-leash-y-3-quillas.jpg?format=auto&quality=40&f=800x800",
+        "price": 89000,
+        "stock": 3
+    },
+
+    {
+        "sku": "772j3i",
+        "name": "accesorio jockey 1",
+        "image": "https://mauiandsons.cl/media/catalog/product/5/a/5aj2035-wv24fullprintmcolor-1.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=576&width=432&canvas=432:576",
+        "price": 10000,
+        "stock": 54        
+    },
+
+    {
+        "sku": "a944j2",
+        "name": "accesorio mochila 1",
+        "image": "https://mauiandsons.cl/media/catalog/product/5/a/5am118-wt23fullprintmcolor-1.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=576&width=432&canvas=432:576",
+        "price": 33990,
+        "stock": 76        
+    },
+
+    {
+        "sku": "jr62a7",
+        "name": "accesorio bolso 1",
+        "image": "https://mauiandsons.cl/media/catalog/product/5/a/5av123-mt22fullprintmcolor_1.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=576&width=432&canvas=432:576",
+        "price": 13440,
+        "stock": 23        
+    },
+
+    {
+        "sku": "7g6k91",
+        "name": "accesorio lentes de sol 1",
+        "image": "https://mauiandsons.cl/media/catalog/product/5/h/5hg1680-uv22_2_1.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=576&width=432&canvas=432:576",
+        "price": 30000,
+        "stock": 45        
+    },
+
+    {
+        "sku": "123456",
+        "name": "poleron 1 hombre",
+        "image": "https://media.istockphoto.com/id/1225397565/es/foto/plantilla-de-sudadera-con-capucha-beige-sudadera-con-capucha-de-manga-larga-con-trayectoria-de.jpg?s=1024x1024&w=is&k=20&c=SkSGbVtCn0fh8Mcm7BmXKaAzn5QTOY4JYg2DdkCnQjo=",
+        "price": 9990,
+        "stock": 60
+        
+    },
+
+    {
+        "sku": "127756",
+        "name": "pantalon 1 hombre",
+        "image": "https://media.istockphoto.com/id/173239968/es/foto/fino-herm%C3%A9tico-jeans-azul-sobre-fondo-blanco.jpg?s=1024x1024&w=is&k=20&c=IABliqXv1uDgC6XujdsI9EfBVGHrIe69OCsIj1BF-r0=",
+        "price": 15490,
+        "stock": 60
+        
+    },
+
+    {
+        "sku": "583456",
+        "name": "camisa 1 hombre",
+        "image": "https://media.istockphoto.com/id/1323480815/es/foto/camiseta-de-la-marina.jpg?s=1024x1024&w=is&k=20&c=tu1xLKs85S-JH3bTdyYFBvAxO8E5_eaAg2o7C6PKTnQ=",
+        "price": 9990,
+        "stock": 60
+        
+    },
+
+    {
+        "sku": "190456",
+        "name": "zapatillas 1 hombre",
+        "image": "https://media.istockphoto.com/id/1249496770/es/foto/zapatillas.jpg?s=1024x1024&w=is&k=20&c=O9DkkBPWJM2dhq25b-7vlKWtfoMEzCsfUa_e9PeTx78=",
+        "price": 32990,
+        "stock": 60
+        
+    },
+
+    {
+        "sku": "189016",
+        "name": "chaqueta 1 hombre",
+        "image": "https://media.istockphoto.com/id/163208487/es/foto/abrigo-macho-aislado-en-el-blanco.jpg?s=1024x1024&w=is&k=20&c=62hCl_YMbrX-3Owj8kkk_yqK0lXQq-nmnH09aakLLZk=",
+        "price": 29990,
+        "stock": 60
+        
+    },
+
+    {
+        "sku": "233346",
+        "name": "chaqueta 2 hombre",
+        "image": "https://media.istockphoto.com/id/1358416884/es/foto/chaqueta-bomber-varsity-aislada-sobre-fondo-blanco.jpg?s=1024x1024&w=is&k=20&c=0t-hkT9w82jgXs7Ro6eBn0qf0g-l6h-icj_hFYy8JkA=",
+        "price":19990,
+        "stock": 60
+        
+    },
+
+    {
+        "sku": "125556",
+        "name": "pantalon 2 hombre",
+        "image": "https://media.istockphoto.com/id/1149139165/es/foto/pantal%C3%B3n-azul-chino-con-cintur%C3%B3n-de-piel-marr%C3%B3n-aislado-sobre-fondo-blanco-comodidad-slim-fit.jpg?s=1024x1024&w=is&k=20&c=vpFZJHZDu7saj8-KRVoJOfOGYYigUo8hFJjb632mao0=",
+        "price": 16990,
+        "stock": 60
+        
+    },
+
+    {
+        "sku": "728901",
+        "name": "zapatillas hombre 2",
+        "image": "https://media.istockphoto.com/id/171224469/es/foto/zapatos-de-lona.jpg?s=1024x1024&w=is&k=20&c=XveN3gOvMG8xHmqYZXzs02kWomjRAp1Nhsgy9TVooPc=",
+        "price": 34990,
+        "stock": 20
+        
+    },
+
+    {
+        "sku": "637492",
+        "name": "vestido 1 mujer",
+        "image": "https://media.istockphoto.com/id/934408078/es/foto/vestido-retro-azul-marino-con-mangas-cortas-aisladas-en-blanco.jpg?s=1024x1024&w=is&k=20&c=RZXUSA1kIwZ9QKpyH4Yi8x8FV1HLdg9FFYxyKASQEEQ=",
+        "price": 20990,
+        "stock": 45
+        
+    },
+
+    {
+        "sku": "718922",
+        "name": "vestido 2 mujer",
+        "image": "https://media.istockphoto.com/id/184354439/es/foto/vestimenta-para-mujer.jpg?s=1024x1024&w=is&k=20&c=_Mp_kbQl3Wl8MekC4SYmoGVUhmt1TgiUwgTMRlfDc0w=",
+        "price": 23990 ,
+        "stock": 44
+        
+    },
+
+    {
+        "sku": "558298",
+        "name": "poleron 2 mujer",
+        "image": "https://media.istockphoto.com/id/522651403/es/foto/chaqueta-deportiva.jpg?s=1024x1024&w=is&k=20&c=LQ6Qwix7yfxDrRDcCnWW-EpZmpuwVtzbr2nze759TnI=",
+        "price": 18990,
+        "stock":34
+        
+    },
+
+    {
+        "sku": "619275",
+        "name": "chaqueta 1 mujer",
+        "image": "https://media.istockphoto.com/id/518618998/es/foto/chaqueta-de-vestir.jpg?s=1024x1024&w=is&k=20&c=DqFoCMQv8xPKS0zfUhjUaWDbNvYPZ2CoP0AofQSShoU=",
+        "price": 35990,
+        "stock": 23
+        
+    },
+
+    {
+        "sku": "937622",
+        "name": "falda 1 mujer",
+        "image": "https://media.istockphoto.com/id/1162100585/es/foto/falda-de-mezclilla-aislada.jpg?s=1024x1024&w=is&k=20&c=-21so7426SCMc1bfHNPlKIvvSNS7B742u8uo9p5dABE=",
+        "price": 22000,
+        "stock": 20
+        
+    },
+
+    {
+        "sku": "819278",
+        "name": "falda 2 mujer",
+        "image": "https://media.istockphoto.com/id/882157056/es/foto/falda-roja-elegante-con-mo%C3%B1o-de-cinta-aislado-en-blanco.jpg?s=1024x1024&w=is&k=20&c=_8tRPJSxM7Q7z8GcsOZEp78Wssx4jg-pxjpCCI-K5P0=",
+        "price": 31000,
+        "stock": 12
+        
+    },
+
+    {
+        "sku": "229823",
+        "name": "pantalones mujer 1 mujer",
+        "image": "https://media.istockphoto.com/id/1003022532/es/foto/los-pantalones-de-color-caqui-en-un-fondo-blanco-aislar-concepto-de-moda.jpg?s=1024x1024&w=is&k=20&c=S6sX8ClR_5r8cSTgkrP1BNMcubAllqQ9MDWaqlH5C_c=",
+        "price": 23990,
+        "stock": 45
+        
+    },
+
+    {
+        "sku": "23910",
+        "name": "shorts 1 mujer",
+        "image": "https://media.istockphoto.com/id/637148076/es/foto/pantalones-de-mujer-aislados-sobre-fondo-blanco.jpg?s=1024x1024&w=is&k=20&c=a8u6FBn3Gb0xqSwUfgQiBwQ5OoAyCz7xVcN2Mrx9qG0=",
+        "price": 15000,
+        "stock": 30
+        
+    },
+
+    {
+        "sku": "72b8zp",
+        "name": "polera niño 1",
+        "image": "https://mauiandsons.cl/media/catalog/product/5/P/5P1301-KV24LISORED-1_3.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=800&width=600&canvas=600:800",
+        "price": 6789,
+        "stock": 10        
+    },
+
+    {
+        "sku": "12569d",
+        "name": "poleron niño 1",
+        "image": "https://mauiandsons.cl/media/catalog/product/5/O/5O1375-KV24LISOBORDEAUX-1_3.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=576&width=432&canvas=432:576",
+        "price": 8990,
+        "stock": 23        
+    },
+
+    {
+        "sku": "6638f6",
+        "name": "pantalon niño 1",
+        "image": "https://mauiandsons.cl/media/catalog/product/5/n/5n1124-ki23lisofgreen-1.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=576&width=432&canvas=432:576",
+        "price": 34000,
+        "stock": 56        
+    },
+
+    {
+        "sku": "1njd73",
+        "name": "parka niño 1",
+        "image": "https://mauiandsons.cl/media/catalog/product/5/k/5k177-ki19lisoclcfrro-1_1.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=800&width=600&canvas=600:800",
+        "price": 34000,
+        "stock": 12        
+    }
+
+]
