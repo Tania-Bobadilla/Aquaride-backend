@@ -35,16 +35,9 @@ const productSchema = new mongoose.Schema({
 
     image: String,
 
-    stock: {
-        type: Number,
-        min: 0,
-        max: 100
-
-    }, 
-
     details: {
         typeProduct: {
-            type: String
+            type: String,
         },
         material: {
             type: String
@@ -53,7 +46,17 @@ const productSchema = new mongoose.Schema({
             type: Number,
             min: 0.1
         }
+        // color: {colorsSchema}
+
     },
+
+    stock: {
+        type: Number,
+        min: 0,
+        max: 100
+
+    }, 
+
     // color: {colorSchema}
 
     // stock
