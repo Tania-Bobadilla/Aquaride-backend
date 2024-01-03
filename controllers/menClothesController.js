@@ -57,5 +57,4 @@ const reduceStock = async (req, res) => {
     }
 }
 
-
 module.exports = {getMenClothes, createMenClothes, getMenById, reduceStock}
