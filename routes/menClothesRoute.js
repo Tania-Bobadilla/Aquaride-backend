@@ -1,14 +1,19 @@
-// const express = require("express"); 
-// const {getMenClothes, createMenClothes} = require("../controllers/menClothesController")
-// // const auth = require("../middlewares/auth")
+const express = require("express"); 
+const {getMenClothes, createMenClothes, getMenById, reduceStock} = require("../controllers/menClothesController")
 
-// // Se instacia el router de express 
-// const menClothesRouter = express.Router();
+// Se instacia el router de express 
+const menClothesRouter = express.Router();
 
-// menClothesRouter.route("/ropa_de_hombre")
-//     .get(getMenClothes) //.get(auth, getProducts) 
+menClothesRouter.route("/ropa_de_hombre")
+    .get(getMenClothes)
 
-// menClothesRouter.route("/crear_ropa_hombre")
-//     .post(createMenClothes)    
-    
-// module.exports = menClothesRouter;
+menClothesRouter.route("/ropa_de_hombre/:id")
+    .get(getMenById)
+
+menClothesRouter.route("/crear_ropa_hombre")
+    .post(createMenClothes)        
+
+menClothesRouter.route("/reduceStock")
+    .put(reduceStock)
+
+module.exports = menClothesRouter;

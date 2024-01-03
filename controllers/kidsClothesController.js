@@ -26,4 +26,35 @@ const createKidsClothes = async (req, res) => {
     }
 };
 
-module.exports = {getKidsClothes, createKidsClothes}
+//get
+const getKidById = async (req, res) => {
+    try {
+        const { id } = req.params;
+
+        const kidClothes = await KidsClothes.findById(id);
+
+        if (!kidClothes) {
+            return res.status(404).json({ success: false, msg: "Product not found" });
+        }
+
+        res.json({ success: true, msg: "Product loaded successfully", kidClothes });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ success: false, msg: "Internal Server Error" });
+    }
+};
+
+// Reduce Stock PUT
+const reduceStock = async (req, res) => {
+    const productPurchased = req.body.cartItems;
+    try {
+        productPurchased.map(async(product) => {
+            await KidsClothes.findByIdAndUpdate(product._id, {stock: product.stock - product.quantity})
+        })
+        res.status(201).json({success: true, msg: "Se ha reducio el stocks de los productos"}) 
+    } catch (error) {
+        res.status(500).json({success: false, msg: error.message})
+    }
+}
+
+module.exports = {getKidsClothes, createKidsClothes, getKidById, reduceStock}

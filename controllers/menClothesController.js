@@ -26,4 +26,36 @@ const createMenClothes = async (req, res) => {
     }
 };
 
-module.exports = {getMenClothes, createMenClothes}
+//get
+const getMenById = async (req, res) => {
+    try {
+        const { id } = req.params;
+
+        const menClothes = await MenClothes.findById(id);
+
+        if (!menClothes) {
+            return res.status(404).json({ success: false, msg: "Product not found" });
+        }
+
+        res.json({ success: true, msg: "Product loaded successfully", menClothes });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ success: false, msg: "Internal Server Error" });
+    }
+};
+
+// Reduce Stock PUT
+const reduceStock = async (req, res) => {
+    const productPurchased = req.body.cartItems;
+    try {
+        productPurchased.map(async(product) => {
+            await MenClothes.findByIdAndUpdate(product._id, {stock: product.stock - product.quantity})
+        })
+        res.status(201).json({success: true, msg: "Se ha reducio el stocks de los productos"}) 
+    } catch (error) {
+        res.status(500).json({success: false, msg: error.message})
+    }
+}
+
+
+module.exports = {getMenClothes, createMenClothes, getMenById, reduceStock}
