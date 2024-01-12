@@ -1,15 +1,16 @@
 // Se importan express y otras librerias
 const express = require("express");
 
+// Rutas instanciadas
 const productRouter = require("./routes/productRoute");
 const userRouter = require("./routes/userRoute");
-
 const kidsClothesRouter = require("./routes/kidsClothesRoute");
 const womenClothesRouter = require("./routes/womenClothesRoute");
 const menClothesRouter = require("./routes/menClothesRoute");
 const accesoriesRouter = require("./routes/accesoriesRoute");
 const surfboardsRouter = require("./routes/surfboardsRoute");
 
+//permite conectarme a una base de datos externa 
 const cors = require("cors")
 
 // Se instancia express (se llama a la funcion express y se guardar en una constante)

@@ -1,14 +1,5 @@
 const mongoose = require("mongoose");
 
-// const colorSchema = new mongoose.Schema({
-//     red: {
-//         type: String
-//     },
-//     blue: {
-//         type: String
-//     }
-
-// })
 
 const accesoriesSchema = new mongoose.Schema({
     sku: {
@@ -26,7 +17,7 @@ const accesoriesSchema = new mongoose.Schema({
         trim: true
     },
     price: {
-        type: Number, 
+        type: String, 
         required: true, 
         min: 0,
         max: 10000000
@@ -53,12 +44,7 @@ const accesoriesSchema = new mongoose.Schema({
             min: 0.1
         }
     },
-    // color: [colorSchema]
 
-    // stock
-    // sku
-    // descripcion
-    // colores (los podemos dejar en otro esquema)
 });
 
 // Se crea un modelo que se conecte a la coleccion en mongodb
