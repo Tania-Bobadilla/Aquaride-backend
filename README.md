@@ -40,8 +40,15 @@ Para verificar la autenticación del usuario se hace una consulta con el sitio w
 
 ## Diagrama de la arquitectura del frontend y backend  
 
-
+![AAAA](https://github.com/Tania-Bobadilla/Aquaride-backend/assets/135383254/bb3831a2-041e-45f7-adfd-2b593c0633b7)
 
 ## Miembros del proyecto
 
 Tania Bobadilla, Ignacio Gómez, Fernanda Ramirez y Rodrigo Velásquez
+
+## Link del frontend
+
+**Página web:** https://fabulous-genie-b3ac69.netlify.app/
+
+**Repositorio:** https://github.com/Tania-Bobadilla/Aquaride-frontend/tree/master
+
