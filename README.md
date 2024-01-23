@@ -44,7 +44,7 @@ Para verificar la autenticación del usuario se hace una consulta con el sitio w
 
 ## Miembros del proyecto
 
-Tania Bobadilla, Ignacio Gómez, Fernanda Ramirez y Rodrigo Velásquez
+Tania Bobadilla [<img src="https://github.com/Tania-Bobadilla.png" width="60px;"/>](https://github.com/Tania-Bobadilla), Ignacio Gómez [<img src="https://github.com/Tania-Bobadilla.png" width="60px;"/>](https://github.com/Tania-Bobadilla) Fernanda Ramirez y Rodrigo Velásquez
 
 ## Link del frontend
 
