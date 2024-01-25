@@ -46,9 +46,9 @@ Para verificar la autenticación del usuario se hace una consulta con el sitio w
 
 Tania Bobadilla [<img src="https://github.com/Tania-Bobadilla.png" width="60px;"/>](https://github.com/Tania-Bobadilla) Ignacio Gómez [<img src="https://github.com/IgnacioAndres07.png" width="60px;"/>](https://github.com/IgnacioAndres07) Fernanda Ramirez [<img src="https://github.com/FerRamirez99.png" width="60px;"/>](https://github.com/FerRamirez99) y Rodrigo Velásquez [<img src="https://github.com/Gruman670.png" width="60px;"/>](https://github.com/Gruman670)
 
-## Link del frontend
+## Links del frontend
 
 **Página web:** https://fabulous-genie-b3ac69.netlify.app/
 
-**Repositorio:** https://github.com/Tania-Bobadilla/Aquaride-frontend/tree/master
+**Repositorio:** https://github.com/FerRamirez99/Proyecto5-Ecommerce-Front
 
